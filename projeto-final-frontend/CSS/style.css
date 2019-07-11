@@ -1,0 +1,10 @@
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background-color: rgb(49, 129, 123);
+}
+
+.primeiroContainer__title{
+    margin-top: 10%;
+    font-size: 100%;
+}
+
