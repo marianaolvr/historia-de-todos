@@ -1,4 +1,4 @@
-const {connect} = require('./ReclamacoesRepository')
+const {connect} = require('./reclamacoesRepository')
 const reclamacoesModel = require('./reclamacoesSchema')
 
 connect()
@@ -13,6 +13,7 @@ const getAll = async () => {
 }
 
 const add = (reclamacao) => {
+    console.log(reclamacao)
     const novaReclamacao = new reclamacoesModel(reclamacao)
     return novaReclamacao.save()
   }
