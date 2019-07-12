@@ -2,45 +2,165 @@
 <html lang="pt.br">
 
 <head>
-    <title>XXXXXXX</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Carta de reclamação para o MEC">
-    <meta name="keywords" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="Stylesheet" type="text/css" href="CSS/style.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <header>
-        
-    </header>
+    <!-- <header>
+        <nav>
+            <div class="nav-wrapper">
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Leis</a></li>
+                    <li><a href="badges.html">Modelo de Carta</a></li>
+                    <li><a href="collapsible.html">Envie sua reclamação</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header> -->
 
     <main>
         <div class="primeiroContainer">
-            <div class="primeiroContainer__title">
-                <h3>Educação.</h3>
-            </div>
 
+            <h3 class="center-align">A história de todos</h3>
+            <p class="center-align">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae est enim excepturi
+                molestias, libero
+                alias? Vel, ex odio. Saepe earum eius error porro in id eos vero magni similique aliquam!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit vitae tenetur sed esse blanditiis
+                possimus doloribus? Enim debitis illum sed commodi praesentium numquam qui, reprehenderit sint nam iure
+                ratione. Dolores.</p>
         </div>
 
 
         <div class="segundoContainer">
 
-            
+            <div class="row">
+                <div class="col s8 push-s2">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Lei 11.645, de 10 de março de 2008</span>
+                            <p>“Art. 26-A. Nos estabelecimentos de ensino fundamental e de ensino médio, públicos e
+                                privados, torna-se obrigatório o estudo da história e cultura afro-brasileira e
+                                indígena.</p>
+                            <br>
+                            <p> § 1º O conteúdo programático a que se refere este artigo incluirá diversos aspectos da
+                                história e da cultura que caracterizam a formação da população brasileira, a partir
+                                desses dois grupos étnicos, tais como o estudo da história da África e dos africanos, a
+                                luta dos negros e dos povos indígenas no Brasil, a cultura negra e indígena brasileira e
+                                o negro e o índio na formação da sociedade nacional, resgatando as suas contribuições
+                                nas áreas social, econômica e política, pertinentes à história do Brasil.</p>
+                            <br>
+                            <p>§ 2º Os conteúdos referentes à história e cultura afro-brasileira e dos povos indígenas
+                                brasileiros serão ministrados no âmbito de todo o currículo escolar, em especial nas
+                                áreas de educação artística e de literatura e história brasileiras.”</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11645.htm">Leia a
+                                íntegra</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="terceiroContainer">
 
-            
-        </div>
+                <div class="row">
+                        <div class="col s4">
+                          <!-- Promo Content 1 goes here -->
+                        </div>
+                    </div>
+                        <div class="col s4">
+                          <!-- Promo Content 2 goes here -->
+                        </div>
+                        <div class="col s4">
+                          <!-- Promo Content 3 goes here -->
+                        </div>
+                  
+                      </div>
 
+        </div>
+        </div>
         <div class="quartoContainer">
+            <h1 class="center-align">A sua escola não cumpre a Lei 11.645?</h1>
+            <h4 class="center-align">Envie uma reclamção formal para o Ministério da Educação.</h4>
+            <div class="row">
+                <form class="col s12 push-s3">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                            <label for="icon_prefix2">Instituição</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
 
-            
-        </div>
+            <div class="row">
+                <form class="col s12 push-s3">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">location_on</i>
+                            <textarea id="location_on" class="materialize-textarea"></textarea>
+                            <label for="location_on">Endereço</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="row">
+                <form class="col s6 push-s3">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">Nome completo</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">mail_outline</i>
+                            <input id="icon_mail_outline" type="tel" class="validate">
+                            <label for="icon_mail_outline">E-mail</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- Modal Trigger -->
+            <div class="row">
+                <div class="col s12 push-s5">
+                    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Veja como ficou a sua carta</a>
+
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal modal-fixed-footer">
+                        <div class="modal-content">
+                            <h4>Modal Header</h4>
+                            <p>A bunch of text</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s6">
+                            <button class="btn waves-effect waves-light" type="submit" name="action"
+                                class="center-align">Enviar
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
     </main>
 
-    <script src="script.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 
 </html>

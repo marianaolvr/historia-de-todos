@@ -1,10 +1,18 @@
-body {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    background-color: rgb(49, 129, 123);
+.primeiroContainer{
+    height: 90vh;
+    background-color: bisque;
 }
 
-.primeiroContainer__title{
-    margin-top: 10%;
-    font-size: 100%;
+.segundoContainer{
+    height: 90vh;
+}
+
+.terceiroContainer{
+    height: 90vh;
+    background-color: brown;
+}
+
+.quartoContainer{
+    height: 90vh;
 }
 
