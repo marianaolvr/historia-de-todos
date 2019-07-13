@@ -19,9 +19,3 @@ function enviarEmail () {
     }
   ).then(response => console.log("criou!"))
 }
-
-
-// $(document).ready(function(){
-//     $('.modal').modal();
-//   });
-  

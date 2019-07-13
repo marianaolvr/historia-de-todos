@@ -3,7 +3,6 @@ const server = express()
 const controller = require('./reclamacoesController')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const nodemailer = require("nodemailer")
 const PORT = 3000
 
 server.use(cors())
