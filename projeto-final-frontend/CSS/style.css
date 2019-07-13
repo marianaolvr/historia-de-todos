@@ -1,6 +1,6 @@
 .primeiroContainer{
     height: 90vh;
-    background-color: rgb(243, 239, 233);
+    background-color: #eceff1;
     
 }
 
@@ -42,4 +42,9 @@
 
 .inputInstituicao{
     color: #0a0a0a;
+}
+
+
+.formulario{
+    background-color: aqua;
 }
