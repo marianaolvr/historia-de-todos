@@ -1,18 +1,45 @@
 .primeiroContainer{
     height: 90vh;
-    background-color: bisque;
+    background-color: rgb(243, 239, 233);
+    
+}
+
+.introducao {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 10em;
+    position: relative;
+    margin: 0;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 .segundoContainer{
     height: 90vh;
-}
+    display: flex;
+    align-items: center;
+    background-color: #ffc400;
+ }
 
 .terceiroContainer{
     height: 90vh;
-    background-color: brown;
-}
+    display: flex;
+    align-items: center;
+    background-color: rgb(243, 239, 233);
+  }
 
 .quartoContainer{
     height: 90vh;
+    background-color: #ffc400;
+    display: flex;
+    align-items: center;
+   }
+
+.nav-wrapper{
+    background-color: #ffc400;
 }
 
+.inputInstituicao{
+    color: #0a0a0a;
+}
