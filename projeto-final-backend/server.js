@@ -11,31 +11,15 @@ server.use(cors())
 server.use(bodyParser.urlencoded({ extended: true }));
 
 
-
-
   server.get("/reclamacoes", async (request, response) => {
     controller.getAll()
   .then(listaDeReclamacoes => response.send(listaDeReclamacoes))
-})
-
-server.post("/reclamacoes/enviar", async (request, response) =>{
-    controller.add(request.body)
-    .then(reclamacao => {
-      const _id = reclamacao._id
-      response.send(_id)
-    })
-    .catch(error => {
-      if(error.name === "ValidationError"){
-        response.sendStatus(400)
-      } else {
-        response.sendStatus(500)
-      }
-    })
-})
 
 
+server.post("/reclamacoes/send-email", async (request, response) =>{
+      controller.add(request.body)
+      .then(listaDeReclamacoes => response.send(listaDeReclamacoes))
 
-server.post('/reclamacoes/send-email', function(req, res) {
   var body = req.body;
   var firstName = body.firstName;
   var lastName = body.lastName;
@@ -75,6 +59,32 @@ server.post('/reclamacoes/send-email', function(req, res) {
   });
 
 });
+})
+
+
+
+
+
+
+
+
+
+
+
+// server.post("/reclamacoes/enviar", async (request, response) =>{
+//     controller.add(request.body)
+//     .then(reclamacao => {
+//       const _id = reclamacao._id
+//       response.send(_id)
+//     })
+//     .catch(error => {
+//       if(error.name === "ValidationError"){
+//         response.sendStatus(400)
+//       } else {
+//         response.sendStatus(500)
+//       }
+//     })
+// })
 
 
 // const config = {
@@ -107,3 +117,6 @@ server.post('/reclamacoes/send-email', function(req, res) {
 
 server.listen(PORT)
 console.info(`Rodando na porta ${PORT}`)
+
+
+
