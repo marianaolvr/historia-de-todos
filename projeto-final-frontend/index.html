@@ -122,7 +122,13 @@
         <div class="terceiroContainer">
 
             <div class="row">
-                <div class="col s3 push-s7">
+                <div class="col s4 push-s1">
+                    <h2>Pressione o Ministério da Educação (MEC) pelo cumprimento da Lei</h2>
+                </div>
+
+
+
+                <div class="col s3 push-s3">
                     <h4 class="center-left">Modelo de carta</h4>
                     <p class="center-left">
                         Caro Ministro da Educação</p>
@@ -197,22 +203,27 @@
                     <div id="modal1" class="modal modal-footer">
                         <div class="modal-content">
                             <h4>Caro Ministro da Educação,</h4>
-                                <p class="center-left">
-                                    Eu, _________________, venho informar que a instituição de ensino ______________, localizada no
-                                    endereço __________________________, descumpre a Lei Nº 11.645, de 10 de março de 2008, que
-                                    obriga o ensino de história
-                                    e cultura afro-brasileira, africana e indígena e as lutas destes povos no Brasil.</p>
-                                <p class="center-left">
-                                    Entendo que o descumprimento da lei empobrece o entendimento dos alunos sobre a cultura e a
-                                    formação do País, fortalecendo preconceitos e estigmas. Sendo a educação a base de toda
-                                    sociedade, considero de extrema importância que a instituição citada seja notificada e
-                                    instruída a adequar seu currículo escolar.
-                                </p>
-                                <p class="center-left"> Com a certeza de que o Ministério da Educação tem grande interesse em fazer
-                                    valer a letra da lei federal, desde já agradeço o esforço em fazer do Brasil um país justo e que
-                                    valoriza a
-                                    própria história e seu povo.
-                                </p>
+                            <p class="center-left">
+                                Eu, _________________, venho informar que a instituição de ensino ______________,
+                                localizada no
+                                endereço __________________________, descumpre a Lei Nº 11.645, de 10 de março de 2008,
+                                que
+                                obriga o ensino de história
+                                e cultura afro-brasileira, africana e indígena e as lutas destes povos no Brasil.</p>
+                            <p class="center-left">
+                                Entendo que o descumprimento da lei empobrece o entendimento dos alunos sobre a cultura
+                                e a
+                                formação do País, fortalecendo preconceitos e estigmas. Sendo a educação a base de toda
+                                sociedade, considero de extrema importância que a instituição citada seja notificada e
+                                instruída a adequar seu currículo escolar.
+                            </p>
+                            <p class="center-left"> Com a certeza de que o Ministério da Educação tem grande interesse
+                                em fazer
+                                valer a letra da lei federal, desde já agradeço o esforço em fazer do Brasil um país
+                                justo e que
+                                valoriza a
+                                própria história e seu povo.
+                            </p>
                         </div>
                         <div class="modal-footer">
                             <a href="#!" class="modal-close waves-effect waves-green btn-flat">FECHAR</a>
@@ -227,6 +238,12 @@
                                 <i class="material-icons right">send</i>
                             </button>
                         </div>
+                        <div class="col s12">
+                                <button class="btn waves-effect red btnEnviaremail" type="submit" name="action"
+                                    class="center-align">Enviar e-mail
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -235,12 +252,44 @@
 
         </div>
         </div>
+
+
+        <form class="contact-form" action="/reclamacoes/send-email" method="post">
+            <div class="firstName field">
+              <label for="first-name">First Name</label>
+              <input type="text" name="firstName" value="" placeholder="">
+            </div>
+        
+            <div class="lastName field">
+              <label for="last-name">Last Name</label>
+              <input type="text" name="lastName" value="" placeholder="">
+            </div>
+        
+            <div class="email field">
+              <label for="email">Email</label>
+              <input type="email" name="email" value="" placeholder="">
+            </div>
+        
+            <div class="message field">
+              <label for="message">Message</label>
+              <textarea name="message" rows="8"></textarea>
+            </div>
+        
+            <div class="submit-button field">
+              <button class="submit" type="submit">Submit</button>
+            </div>
+        
+          </form>
+
+
+
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="scriptNodemailer.js"></script>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

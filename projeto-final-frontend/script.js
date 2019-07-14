@@ -8,6 +8,8 @@ function enviarEmail () {
   const reclamacao = {
     instituicao, endereco, nome, email
   }
+
+  
   fetch(
     'http://localhost:3000/reclamacoes/enviar',
     {
@@ -19,3 +21,6 @@ function enviarEmail () {
     }
   ).then(response => console.log("criou!"))
 }
+
+
+
