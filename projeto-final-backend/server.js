@@ -3,38 +3,54 @@ const server = express()
 const controller = require('./reclamacoesController')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const mailer = require('nodemailer');
+const mailer = require('nodemailer')
 const PORT = 3000
 
 server.use(cors())
-// server.use(bodyParser.json())
+server.use(bodyParser.json())
 server.use(bodyParser.urlencoded({ extended: true }));
 
 
-  server.get("/reclamacoes", async (request, response) => {
-    controller.getAll()
-  .then(listaDeReclamacoes => response.send(listaDeReclamacoes))
+server.get("/reclamacoes", async (request, response) => {
+  controller.getAll()
+    .then(listaDeReclamacoes => response.send(listaDeReclamacoes))
+})
 
+server.post("/reclamacoes/send-email", async (request, response) => {
+  controller.add(request.body)
+    .then(listaDeReclamacoes => response.send(listaDeReclamacoes))
 
-server.post("/reclamacoes/send-email", async (request, response) =>{
-      controller.add(request.body)
-      .then(listaDeReclamacoes => response.send(listaDeReclamacoes))
-
-  var body = req.body;
-  var firstName = body.firstName;
-  var lastName = body.lastName;
+  var body = request.body;
+  var nomeCompleto = body.nomeCompleto;
+  var instituicaoEnsino = body.instituicaoEnsino;
+  var endereco = body.endereco;
   var email = body.email;
-  var message = body.message;
 
   var composedMessage = {
-    text: 'Hey Person!\n\n' +
-      `${firstName} ${lastName} has contacted you through your website. Here is their contact information and message: \n\n` +
-      `First Name: ${firstName} \n` +
-      `Last Name: ${lastName} \n` +
-      `Email Address: ${email} \n` +
-      `Message: ${message} \n\n`,
-    subject: 'Website Inquiry'
+    text: 'Caro Ministro da Educação, \n\n' +
+      `Eu, ${nomeCompleto} venho informar que a instituição de ensino ${instituicaoEnsino}, localizada no endereço ${endereco}, 
+      descumpre a Lei Nº 11.645, de 10 de março de 2008, que obriga o ensino de história e cultura afro-brasileira, africana e 
+      indígena e as lutas destes povos no Brasil. \n` +
+      
+      `Entendo que o descumprimento da lei empobrece o entendimento dos alunos sobre a cultura e a formação do País, fortalecendo 
+      preconceitos e estigmas. Sendo a educação a base de toda sociedade, considero de extrema importância que a instituição citada 
+      seja notificada e instruída a adequar seu currículo escolar.\n` +
+      
+      `Com a certeza de que o Ministério da Educação tem grande interesse em fazer valer a letra da lei federal, desde já agradeço o 
+      esforço em fazer do Brasil um país justo e que valoriza a própria história e seu povo. \n\n`,
+      subject: 'Escola não cumpre a Lei Federal 11.645'
   };
+
+
+  // var composedMessage = {
+  //   text: 'Hey Person!\n\n' +
+  //     `${firstName} ${lastName} has contacted you through your website. Here is their contact information and message: \n\n` +
+  //     `First Name: ${firstName} \n` +
+  //     `Last Name: ${lastName} \n` +
+  //     `Email Address: ${email} \n` +
+  //     `Message: ${message} \n\n`,
+  //   subject: 'Website Inquiry'
+  // };
 
   var transporter = mailer.createTransport({
     host: 'smtp.mailtrap.io',
@@ -46,7 +62,7 @@ server.post("/reclamacoes/send-email", async (request, response) =>{
   });
 
   transporter.sendMail({
-    from: 'From Name <example@example.com>',
+    from: `${email}`,
     to: 'olvr.mariana@gmail.com',
     subject: composedMessage.subject,
     text: composedMessage.text
@@ -59,7 +75,6 @@ server.post("/reclamacoes/send-email", async (request, response) =>{
   });
 
 });
-})
 
 
 

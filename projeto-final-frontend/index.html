@@ -167,21 +167,21 @@
                     <form class="col s12 push-s3">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">mode_edit</i>
-                            <input placeholder="Instituição" id="icon_prefix2" class="inputInstituicao"></input>
+                            <input placeholder="Nome Completo" id="icon_prefix2" class="inputNomeCompleto"></input>
                         </div>
                     </form>
 
                     <form class="col s12 push-s3">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">location_on</i>
-                            <input placeholder="Endereço" id="location_on" class="inputEndereco"></input>
+                            <input placeholder="Instituicao de Ensino" id="location_on" class="inputEscola"></input>
                         </div>
                     </form>
 
                     <form class="col s6 push-s3">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input placeholder="Nome" id="icon_prefix" type="text" class="validate inputNome">
+                            <input placeholder="Endereço da Instituição" id="icon_prefix" type="text" class="validate inputEndereco">
                         </div>
 
                         <div class="input-field col s6">
@@ -238,12 +238,7 @@
                                 <i class="material-icons right">send</i>
                             </button>
                         </div>
-                        <div class="col s12">
-                                <button class="btn waves-effect red btnEnviaremail" type="submit" name="action"
-                                    class="center-align">Enviar e-mail
-                                    <i class="material-icons right">send</i>
-                                </button>
-                            </div>
+                    
                     </div>
                 </div>
             </div>
@@ -252,38 +247,6 @@
 
         </div>
         </div>
-
-<!-- Formulário de test do POST com o nodemailer -->
-
-        <form class="contact-form" action="/reclamacoes/send-email" method="post">
-            <div class="firstName field">
-              <label for="first-name">First Name</label>
-              <input type="text" name="firstName" value="" placeholder="">
-            </div>
-        
-            <div class="lastName field">
-              <label for="last-name">Last Name</label>
-              <input type="text" name="lastName" value="" placeholder="">
-            </div>
-        
-            <div class="email field">
-              <label for="email">Email</label>
-              <input type="email" name="email" value="" placeholder="">
-            </div>
-        
-            <div class="message field">
-              <label for="message">Message</label>
-              <textarea name="message" rows="8"></textarea>
-            </div>
-        
-            <div class="submit-button field">
-              <button class="submit" type="submit">Submit</button>
-            </div>
-        
-          </form>
-
-
-
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 

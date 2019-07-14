@@ -1,17 +1,17 @@
 const botao = document.querySelector('.btnEnviar')
 botao.addEventListener("click", enviarEmail)
 function enviarEmail () {
-  const instituicao = document.querySelector(".inputInstituicao").value
+  const nomeCompleto = document.querySelector(".inputNomeCompleto").value
+  const instituicaoEnsino = document.querySelector(".inputEscola").value
   const endereco = document.querySelector(".inputEndereco").value
-  const nome = document.querySelector(".inputNome").value
   const email = document.querySelector(".inputEmail").value
   const reclamacao = {
-    instituicao, endereco, nome, email
+    nomeCompleto, instituicaoEnsino, endereco, email
   }
 
   
   fetch(
-    'http://localhost:3000/reclamacoes/enviar',
+    'http://localhost:3000/reclamacoes/send-email',
     {
       method: 'POST',
       body: JSON.stringify(reclamacao),
