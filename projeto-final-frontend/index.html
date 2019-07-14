@@ -20,21 +20,21 @@
         <nav>
             <div class="nav-wrapper">
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Leis</a></li>
-                    <li><a href="badges.html">Modelo de Carta</a></li>
-                    <li><a href="collapsible.html">Envie sua reclamação</a></li>
+                    <li><a href="#containerDois">Lei</a></li>
+                    <li><a href="#containerTres">Modelo de Carta</a></li>
+                    <li><a href="#containerQuatro">Envie sua reclamação</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <div class="primeiroContainer">
+        <div class="primeiroContainer" id="containerUm">
             <div class="introducao">
                 <div class="row">
                     <div class="col s3 push-s3">
                         <h3 class="center-left">A HISTÓRIA DE TODOS</h3>
-                        <p class="center-left">
+                        <p class="center-center">
                             Você sabia que, desde 2003, as escolas de todo o Brasil, públicas ou
                             particulares, são obrigadas ensinar história e da cultura afro-brasileira? Cinco anos
                             depois, outra lei incluiu a obrigatoriedade do ensino sobre a história e a cultura índigena.
@@ -49,15 +49,11 @@
                             escolas que ainda não cumprem as leis fedeais e as maiores dificuldades em implantar o
                             ensino de
                             histórias fundamentais para a própria história brasileira.
-
-
-
                         </p>
                     </div>
 
                     <div class="col s2 push-s3">
-                        <img class="responsive-img"
-                            src="img/stock-vector-vector-cartoon-illustration-of-kid-girls-reading-an-interesting-book-isolated-on-white-background-1338830123.jpg">
+                        <img class="responsive-img" src="img\ilustracao-pagina1.jpg" alt="Ilustrução menina lendo com balões de fala">
                     </div>
                 </div>
 
@@ -65,31 +61,22 @@
             <div class="botoes">
                 <div class="row">
                     <div class="col s6 push-s2">
-                        <button class="btn waves-effect deep-orange accent-1
-                        " type="submit" name="action" class="center-align">Conheça a lei
-                        </button>
+                    <a class="waves-effect red darken-1 btn" href="#containerDois">Conheça a lei</a>
                     </div>
-
 
                     <div class="col s6 pull-s2">
-                        <button class="btn waves-effect waves-light" type="submit" name="action"
-                            class="center-align">Mande a sua carta
-                        </button>
+                            <a class="waves-effect red darken-1 btn" href="#containerTres">Mande a sua carta</a>
                     </div>
-
                 </div>
             </div>
         </div>
 
-
-
-
-
-        <div class="segundoContainer">
+        <div class="segundoContainer" id="containerDois">
             <div class="posicaoCard"></div>
             <div class="row">
                 <div class="col s8 push-s2">
-                    <div class="card amber amber lighten-5">
+                    <div class="card blue-grey lighten-4
+                    " id="primeiroCard">
                         <div class="card-content gray-text">
                             <span class="card-title">Lei 11.645, de 10 de março de 2008</span>
                             <p>“Art. 26-A. Nos estabelecimentos de ensino fundamental e de ensino médio, públicos e
@@ -108,18 +95,29 @@
                                 áreas de educação artística e de literatura e história brasileiras.”</p>
                         </div>
                         <div class="card-action">
-                            <a href="http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11645.htm">Leia a
-                                íntegra</a>
+                            
+                            <a href="http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11645.htm"><b>Leia a
+                                íntegra</b></a>
+                           
+                        </div>
+                        <div class="col s2">
+                        <a class="waves-effect red darken-1 btn" href="#containerUm">Home</a>
+                        
                         </div>
 
+                        <div class="col s3 pull-s1">
+                                <a class="waves-effect red darken-1 btn" href="#containerTres">Mande a sua carta</a>
+                        </div>
                     </div>
                 </div>
 
             </div>
+            
         </div>
+        
         </div>
 
-        <div class="terceiroContainer">
+        <div class="terceiroContainer" id="containerTres">
 
             <div class="row">
                 <div class="col s4 push-s1">
@@ -133,7 +131,7 @@
                     <p class="center-left">
                         Caro Ministro da Educação</p>
                     <p class="center-left">
-                        Eu, _________________, venho informar que a instituição de ensino ______________, localizada no
+                        `Eu ___________________, venho informar que a instituição de ensino ______________, localizada no
                         endereço __________________________, descumpre a Lei Nº 11.645, de 10 de março de 2008, que
                         obriga o ensino de história
                         e cultura afro-brasileira, africana e indígena e as lutas destes povos no Brasil.</p>
@@ -154,7 +152,7 @@
 
         </div>
 
-        <div class="quartoContainer">
+        <div class="quartoContainer" id="containerQuatro">
             <div class="row">
 
                 <div class="col s3 push-s1">
@@ -196,10 +194,10 @@
 
                 <div class="col s9 push-s3">
 
-                    <!-- Modal Trigger -->
+                    <!-- Modal Trigger
                     <a class="waves-effect red btn modal-trigger" href="#modal1">Veja como ficou a sua carta</a>
 
-                    <!-- Modal Structure -->
+                    Modal Structure
                     <div id="modal1" class="modal modal-footer">
                         <div class="modal-content">
                             <h4>Caro Ministro da Educação,</h4>
@@ -228,12 +226,12 @@
                         <div class="modal-footer">
                             <a href="#!" class="modal-close waves-effect waves-green btn-flat">FECHAR</a>
                         </div>
-                    </div>
+                    </div> -->
 
 
                     <div class="row">
                         <div class="col s12">
-                            <button class="btn waves-effect red btnEnviar" type="submit" name="action"
+                            <button class="btn waves-effect red darken-1 btnEnviar" type="submit" name="action"
                                 class="center-align">Enviar
                                 <i class="material-icons right">send</i>
                             </button>
@@ -242,10 +240,16 @@
                     </div>
                 </div>
             </div>
-
+            
 
 
         </div>
+        </div>
+
+        <div class="rodape__pagina">
+            <footer class="rodape">
+                <p> Direitos Reservados &#169 2019 | Juliana Koch e Mariana Oliveira</p>
+            </footer>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -253,7 +257,7 @@
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.js"></script>
     <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="scriptNodemailer.js"></script>
+    <!-- <script type="text/javascript" src="scriptNodemailer.js"></script> -->
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
