@@ -16,25 +16,25 @@
 }
 
 .segundoContainer{
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #607d8b;
+    background-color: #383d50;
  }
 
 .terceiroContainer{
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     background-color: white;
   }
 
 .quartoContainer{
-    height: 90vh;
+    height: 100vh;
     background-color: rgb(243, 239, 233);
     display: flex;
     align-items: center;
-    background-color: #607d8b;
+    background-color: #383d50;
    }
 
 .nav-wrapper{
@@ -59,3 +59,12 @@
     align-items: center;
   }
 
+.ilustraLivro{
+    display: flex;
+    align-items: center;
+}
+
+
+#título{
+    color:white;
+}

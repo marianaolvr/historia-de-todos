@@ -41,17 +41,6 @@ server.post("/reclamacoes/send-email", async (request, response) => {
       subject: 'Escola não cumpre a Lei Federal 11.645'
   };
 
-
-  // var composedMessage = {
-  //   text: 'Hey Person!\n\n' +
-  //     `${firstName} ${lastName} has contacted you through your website. Here is their contact information and message: \n\n` +
-  //     `First Name: ${firstName} \n` +
-  //     `Last Name: ${lastName} \n` +
-  //     `Email Address: ${email} \n` +
-  //     `Message: ${message} \n\n`,
-  //   subject: 'Website Inquiry'
-  // };
-
   var transporter = mailer.createTransport({
     host: 'smtp.mailtrap.io',
     port: 2525,
@@ -75,60 +64,6 @@ server.post("/reclamacoes/send-email", async (request, response) => {
   });
 
 });
-
-
-
-
-
-
-
-
-
-
-
-// server.post("/reclamacoes/enviar", async (request, response) =>{
-//     controller.add(request.body)
-//     .then(reclamacao => {
-//       const _id = reclamacao._id
-//       response.send(_id)
-//     })
-//     .catch(error => {
-//       if(error.name === "ValidationError"){
-//         response.sendStatus(400)
-//       } else {
-//         response.sendStatus(500)
-//       }
-//     })
-// })
-
-
-// const config = {
-//   host: "smtp.mailtrap.io",
-//   port: 2525,
-//   auth: {
-//     user: "a0b56f4fe79fbd",
-//     pass: "5e77fa584b8f8a",
-//   }
-// };
-
-// const transporter = mailer.createTransport(config);
-// server.post("/reclamacoes/send-email", (request, response) =>{
-//   const message = {
-//     from: "ahistoriadetodos@gmail.com",
-//     to: "olvr.mariana@gmail.com",
-//     subject: "Escola que descumpre a Lei 11.645",
-//     text: "lorem ipsum lorem ipsum"
-//   }
-// transporter.sendMail(message, (error, info) =>{
-//   if (error){
-//     return response.status(400).send(error)
-//   }
-//   return response.status(200).end();
-// })
-// res.redirect("/index.html");
-// console.log(redirect)
-// });
-
 
 server.listen(PORT)
 console.info(`Rodando na porta ${PORT}`)
